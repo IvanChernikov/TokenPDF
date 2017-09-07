@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>PDF Repository</title>
+	<!-- Style -->
+	<link href="master.css" rel="stylesheet" type="text/css">
+	
+	<!-- JQuery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+<body>
+<div id="Page">
+	<h1>PDF Repository</h1>
+	<!-- Clonables -->
+	<div class="block message popup clone" style="display:none;">
+		<h2>Message Header</h2>
+		<p>Message Body</p>
+	</div>
+	<div class="file clone" style="display:none;">
+		<img src="/pdf.png" alt="PDF" class="thumb">
+		<span class="filename"></span>
+		<span class="filesize"></span>
+		<div style="clear:both;"></div>
+	</div>
+	<div class="pdf clone" style="display:none;">
+		<div>
+			<img src="/pdf.png" alt="PDF" class="thumb">
+			<a href="javascript:void(0);" class="pdfLink"><span class="filename"></span></a>
+			<div style="clear:both;"></div>
+		</div>
+		<p>Uploaded on <span class="date"></span> by <span class="uploader"></span></p>
+	</div>
+	<!-- End Clonables -->
+	<div id="MessageContainer"></div>
+	
+	<div id="LoginBlock" class="block app">
+		<h2>Login</h2>
+		<form id="LoginForm">
+			<label for="Username">Username</label>
+			<input name="Username" id="Username" type="text" required placeholder="email@example.com" value="ivan@token.com">
+			<br>
+			<label for="Password">Password</label>
+			<input name="Password" id="Password" type="password" required placeholder="Password1@3" value="werewolf">
+			<br>
+			<input type="submit" value="Authorize">
+		</form>
+	</div>
+	
+	<div id="UploadBlock" class="block app" style="display:none;">
+		<h2>Upload</h2>
+		<form id="UploadForm">
+			<label id="FileDrag" for="Files">Click or Drag Files Here</label>
+			<input accept="application/pdf" name="Files[]" id="Files" type="file" multiple>
+			<div id="FileList"></div>
+			<input type="submit" value="Upload">
+		</form>
+		<div id="StatusBlock" style="display:none;">
+			<h2>Upload Progress<h2>
+			<div id="StatusBack">
+				<div id="StatusFront"></div>
+				<div id="StatusText"></div>
+			</div>
+		</div>
+	</div>
+	
+	<div id="ListBlock" style="display:none;" class="block app">
+		<h2>PDF List</h2>
+		<form id="ListForm">
+			<input type="submit" value="Refresh">
+		</form>
+		<div id="PDFList"></div>
+	</div>
+	
+	<div id="TokenBlock" style="display:none;" class="block app">
+		<h2>Authorization Token</h2>
+		<div id="TokenExpires"></div>
+		<button id="TokenShow" type="button">Show/Hide</button>
+		<div id="TokenValue" style="display:none;"></div>
+	</div>
+</div>	
+<!-- Scripts -->
+<script src="app.js"></script>
+<!-- End Scripts -->
+</body>
+</html>
