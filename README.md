@@ -14,3 +14,10 @@ Change settings in '/api/config.php':
 # Database
 Run script '/api/sql/test_sql.sql' to setup database.
 Note that different credentials have different permissions.
+
+# TODO
+- Refactor server side code
+- Refactor client side code
+- Create a dispatcher on server
+- Add additional validation for file upload
+- Add additional error checking
