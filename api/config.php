@@ -11,10 +11,10 @@ define ('TOKEN_EXPIRATION_TIME', 300); // Time in seconds
 
 /* DB Variables */
 define ('DB_HOSTNAME', 'localhost');
-define ('DB_USERNAME', 'admin');
-define ('DB_PASSWORD', 'werewolf');
+define ('DB_USERNAME', 'usr');
+define ('DB_PASSWORD', 'pwd');
 define ('DB_PORT', 3306);
-define ('DB_DATABASE', 'token');
+define ('DB_DATABASE', 'token'); // Change DB in the SQL file if you change this
 
 /* Load Classes */
 // Composer autoload
